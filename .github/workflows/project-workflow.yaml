@@ -1,0 +1,54 @@
+name: Tom's project workflow for github actions
+on: push
+
+jobs:
+    testing_action:
+        runs-on: ubuntu-latest
+        steps:
+        - run: |
+                pwd 
+                ls -al
+
+    passes_black:
+        runs-on: ubuntu-latest
+        steps:      
+        - uses: actions/checkout@v3
+        - run: |
+                pip install black
+                black --check .
+
+    passes_flake8:
+        runs-on: ubuntu-latest
+        steps:      
+        - uses: actions/checkout@v3
+        - run: |
+                pip install flake8
+                pip install pyomo
+                flake8 ./src/find_pyomo_constraints.py
+                flake8 ./src/tests/project_test.py
+
+    passes_pylint:
+        runs-on: ubuntu-latest
+        steps:      
+        - uses: actions/checkout@v3
+        - run: |
+                pip install pylint
+                pip install pyomo
+                pylint ./src/find_pyomo_constraints.py
+                pylint ./src/tests/project_test.py
+    
+    passes_pytest:
+        runs-on: ubuntu-latest
+        steps:      
+        - uses: actions/checkout@v3
+        - run: |
+                pip install pytest
+                pip install pyomo
+                pytest
+    
+    pip_installable:
+        runs-on: ubuntu-latest
+        steps:      
+        - uses: actions/checkout@v3
+        - run: |
+                pip install src/
