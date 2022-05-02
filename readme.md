@@ -1,6 +1,6 @@
 
 
-# Assignments
+# Project 06-682
 
 -   [x] Put your project proposal in a document called project-proposal.md. You
     should refine this to clarify your plan and what you want your project to
@@ -9,7 +9,7 @@
 Your project should:
 
 -   [x] Put a link to your Deepnote repository where you did the work in the
-    readme.md, and make sure to give Prof. Kitchin edit access to it.  
+    readme.md.  
     - Here is the [link](https://deepnote.com/workspace/tom-krumpolc-8bc0-9971debd-9ed4-45ae-9851-9b3c3332d434/project/lecture-01-Duplicate-F0PBQE5jQyCSiw8dn-8JEA/%2Fproject-tkrumpol%2Freadme.md)
 -   [x] solve a practical problem that is not too trivial, and that a reusable
     package would be helpful for.
@@ -37,7 +37,4 @@ Your project should:
 You should put your project code in a directory called `src`. You can name your
 project anything you want inside of that.
 
-I am more interested in seeing a good, well-documented solution to a single
-problem than lots of partial, undocumented solutions to many problems. You can
-always add things to it after things are working right.
 
